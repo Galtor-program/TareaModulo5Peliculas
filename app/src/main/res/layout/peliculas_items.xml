@@ -14,7 +14,7 @@
             android:id="@+id/categoriaTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3.5"
+            android:text="Acción"
             android:layout_weight="0.5"
             android:textSize="20dp"
             android:textStyle="bold"
@@ -24,7 +24,7 @@
             android:id="@+id/nombreTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Los Andes - Chile"
+            android:text="El Padrino"
             android:textSize="20dp"
             android:layout_weight="2"
             android:textStyle="bold"
@@ -34,7 +34,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:background="@drawable/baseline_local_movies_24"/>
+            android:background="@drawable/baseline_local_movies_24"
+            android:backgroundTint="@color/design_default_color_secondary_variant" />
 
     </LinearLayout>
 

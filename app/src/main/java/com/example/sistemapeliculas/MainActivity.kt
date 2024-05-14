@@ -1,6 +1,7 @@
 package com.example.sistemapeliculas
 
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +11,7 @@ import com.example.sistemapeliculas.adapters.PeliculaAdapter
 
 import com.example.sistemapeliculas.databinding.ActivityMainBinding
 import com.example.sistemapeliculas.entities.Pelicula
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,12 +29,11 @@ class MainActivity : AppCompatActivity() {
         binding.recyclerPeliculas.adapter = peliculaAdapter
         peliculaAdapter.pelicula = Pelicula.dataPelicula
         peliculaAdapter.onItemClickListener = { pelicula ->
-            Toast.makeText(
-                this, pelicula.Director,
-                Toast.LENGTH_LONG
-            ).show()
-        }
+            val fragment = PeliculasInfoFragment()
+            fragment.currentPelicula = pelicula
+            fragment.show(supportFragmentManager,"PeliculasInfoFragment")
 
+        }
 
     }
 
